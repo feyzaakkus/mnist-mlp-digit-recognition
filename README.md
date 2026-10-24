@@ -136,9 +136,15 @@ The training loss decreased throughout training for both models. Model 1 achieve
 
 ## 8. Handwritten Student ID Recognition
 
-A handwritten student ID number was used to evaluate the selected model on data outside the MNIST dataset.
+A personally handwritten student ID number was used to evaluate the selected model on data outside the MNIST dataset.
 
-The original handwritten image was processed using the following steps:
+### Original Handwritten Student ID
+
+The original handwritten image was used as the input for the preprocessing and prediction pipeline.
+
+![Original Handwritten Student ID](images/24120205065.jpg)
+
+The original image was processed using the following steps:
 
 1. Convert the image to grayscale.
 2. Improve contrast and apply thresholding.
@@ -156,7 +162,7 @@ The original handwritten image was processed using the following steps:
 - Correctly predicted digits: 8 out of 11
 - Digit-level accuracy: 72.73%
 
-![Handwritten Student ID Results](images/handwriting_results.png)
+![Handwritten Student ID Prediction Results](images/handwriting_results.png)
 
 The model correctly classified 8 of the 11 detected digits. Its performance on the handwritten student ID was lower than its accuracy on the MNIST test dataset.
 
@@ -184,7 +190,7 @@ The results suggest that further improvements could be achieved through better p
 pip install torch torchvision numpy matplotlib opencv-python pillow
 ```
 
-4. Ensure that the handwritten student ID image is available at the path specified in the notebook.
+4. Ensure that the handwritten student ID image is available at the path specified in the notebook, or update the image path to match your local environment.
 5. Run the notebook cells in order.
 
 The MNIST dataset is downloaded automatically through Torchvision when needed.
@@ -202,7 +208,7 @@ mnist-mlp-digit-recognition/
     └── 24120205065.jpg
 ```
 
-The image filenames and notebook filename in this structure should match the files uploaded to the repository. The `images` directory should contain the training plots, model comparison plot, handwritten prediction result, and original handwritten student ID image.
+The image filenames and notebook filename in this structure should match the files uploaded to the repository. The `images` directory contains the training plots, model comparison plot, handwritten prediction result, and original handwritten student ID image.
 
 ## 12. Conclusion
 
